@@ -6,8 +6,17 @@
       "title": "SK건설(현 SK에코플랜트) – EMC홀딩스 인수",
       "year": 2020,
       "industry": "환경(수처리·폐기물)",
-      "keywords": ["환경", "폐기물", "수처리", "소각", "매립"],
-      "structures": ["share_purchase", "lbo_financing"],
+      "keywords": [
+        "환경",
+        "폐기물",
+        "수처리",
+        "소각",
+        "매립"
+      ],
+      "structures": [
+        "share_purchase",
+        "lbo_financing"
+      ],
       "size": "약 1조원",
       "summary": "PE(어펄마캐피탈)가 보유한 국내 최대 수처리·폐기물 플랫폼 EMC홀딩스 지분 100%를 구주 인수 방식으로 취득.",
       "lesson": "인허가·운영권이 법인에 귀속되는 환경업 특성상 주식양수도가 선호되며, 플랫폼 인수 후 지역 소각·매립 업체 볼트온(add-on)으로 확장하는 전략의 출발점이 됨."
@@ -17,8 +26,15 @@
       "title": "SK에코플랜트 – 테스(TES) 인수",
       "year": 2022,
       "industry": "환경(전자폐기물 재활용)",
-      "keywords": ["환경", "폐기물", "재활용", "크로스보더"],
-      "structures": ["share_purchase"],
+      "keywords": [
+        "환경",
+        "폐기물",
+        "재활용",
+        "크로스보더"
+      ],
+      "structures": [
+        "share_purchase"
+      ],
       "size": "약 1조원 이상",
       "summary": "싱가포르 전자폐기물(E-waste) 재활용 기업 TES 지분을 구주 인수 방식으로 취득한 크로스보더 거래.",
       "lesson": "해외 인수 시 다국적 자회사·인허가를 한 번에 확보하기 위해 지주사 단위 주식 인수 구조를 활용."
@@ -28,8 +44,18 @@
       "title": "IMM 컨소시엄 – 에코비트 인수",
       "year": 2024,
       "industry": "환경(수처리·폐기물)",
-      "keywords": ["환경", "폐기물", "수처리", "소각", "매립"],
-      "structures": ["share_purchase", "consortium", "joint_venture"],
+      "keywords": [
+        "환경",
+        "폐기물",
+        "수처리",
+        "소각",
+        "매립"
+      ],
+      "structures": [
+        "share_purchase",
+        "consortium",
+        "joint_venture"
+      ],
       "size": "약 2조원대",
       "summary": "태영그룹(TY홀딩스)과 KKR이 50:50으로 공동 보유하던 환경 플랫폼 에코비트 지분 100%를 IMM PE·IMM인베스트먼트 컨소시엄이 인수.",
       "lesson": "SI·FI 합작 공동보유(JV) 이후 공동 엑싯 사례. 매도자(태영) 유동성 위기 하에서 일정 압박이 가격·조건 협상에 영향을 줌."
@@ -39,8 +65,15 @@
       "title": "대한항공 – 아시아나항공 인수",
       "year": 2020,
       "industry": "항공",
-      "keywords": ["항공", "운송", "구조조정"],
-      "structures": ["new_share_issue", "mezzanine_terms"],
+      "keywords": [
+        "항공",
+        "운송",
+        "구조조정"
+      ],
+      "structures": [
+        "new_share_issue",
+        "mezzanine_terms"
+      ],
       "size": "제3자배정 유상증자 약 1.5조원",
       "summary": "대한항공이 아시아나항공 제3자배정 유상증자에 참여(지분 약 64%)하고 영구 전환사채 등을 인수해 경영권을 확보. 해외 기업결합심사를 거쳐 2024년 말 거래 종결.",
       "lesson": "구주가 아닌 신주 인수로 대상회사 재무구조를 개선하는 구조. 다수 국가 기업결합심사로 종결까지 약 4년 소요 — 선행조건·Long-stop date 설계가 핵심."
@@ -50,8 +83,14 @@
       "title": "이마트 – 이베이코리아 인수",
       "year": 2021,
       "industry": "유통·이커머스",
-      "keywords": ["유통", "이커머스", "플랫폼"],
-      "structures": ["share_purchase"],
+      "keywords": [
+        "유통",
+        "이커머스",
+        "플랫폼"
+      ],
+      "structures": [
+        "share_purchase"
+      ],
       "size": "약 3.4조원 (지분 80.01%)",
       "summary": "이베이 본사로부터 이베이코리아 지분 80.01%를 구주 인수하고 매도자가 19.99%를 잔류 보유.",
       "lesson": "매도자 잔여지분 보유로 인수가 부담을 낮추고 이해관계를 정렬. 이후 대규모 영업권 손상 이슈로 고가 인수 리스크도 함께 보여줌."
@@ -61,8 +100,15 @@
       "title": "카카오 – 로엔엔터테인먼트(멜론) 인수",
       "year": 2016,
       "industry": "미디어·콘텐츠",
-      "keywords": ["미디어", "콘텐츠", "플랫폼"],
-      "structures": ["share_purchase", "share_swap"],
+      "keywords": [
+        "미디어",
+        "콘텐츠",
+        "플랫폼"
+      ],
+      "structures": [
+        "share_purchase",
+        "share_swap"
+      ],
       "size": "약 1.9조원 (지분 약 76%)",
       "summary": "PE(어피니티) 등이 보유한 로엔 지분을 인수하면서 대가 일부를 카카오 신주(제3자배정)로 지급.",
       "lesson": "현금+주식 혼합 대가로 매수자 현금부담을 줄이고 매도자에게 매수자 주가 업사이드를 공유."
@@ -72,8 +118,16 @@
       "title": "카카오 – SM엔터테인먼트 공개매수",
       "year": 2023,
       "industry": "미디어·콘텐츠",
-      "keywords": ["미디어", "콘텐츠", "엔터", "상장사"],
-      "structures": ["tender_offer", "new_share_issue"],
+      "keywords": [
+        "미디어",
+        "콘텐츠",
+        "엔터",
+        "상장사"
+      ],
+      "structures": [
+        "tender_offer",
+        "new_share_issue"
+      ],
       "size": "공개매수 주당 15만원",
       "summary": "하이브와의 경영권 경쟁 속에서 카카오·카카오엔터가 공개매수를 실시해 최대주주 지위를 확보(신주·CB 인수 계획 포함).",
       "lesson": "경쟁 공개매수는 가격을 빠르게 끌어올림. 공개매수 기간 전후 장내 매집 행위가 법적 분쟁으로 이어져 불공정거래 규제 준수가 핵심임을 보여줌."
@@ -83,8 +137,17 @@
       "title": "SK하이닉스 – 인텔 NAND 사업 인수",
       "year": 2020,
       "industry": "반도체",
-      "keywords": ["반도체", "제조", "크로스보더", "carve-out"],
-      "structures": ["asset_purchase", "business_transfer", "staged_closing"],
+      "keywords": [
+        "반도체",
+        "제조",
+        "크로스보더",
+        "carve-out"
+      ],
+      "structures": [
+        "asset_purchase",
+        "business_transfer",
+        "staged_closing"
+      ],
       "size": "약 10조원 (90억 달러)",
       "summary": "인텔의 NAND 사업부(SSD 사업, 다롄 팹 자산)를 1차 클로징(2021)으로 인수하고, 잔여 IP·인력 등은 2차 클로징(2025)으로 이전한 2단계 사업 인수.",
       "lesson": "carve-out 거래에서 분할 클로징으로 기술이전 리스크를 관리. 다수 국가(특히 중국) 기업결합 승인이 일정의 핵심 변수."
@@ -94,8 +157,15 @@
       "title": "MBK파트너스 – 홈플러스 인수",
       "year": 2015,
       "industry": "유통",
-      "keywords": ["유통", "리테일", "부동산"],
-      "structures": ["share_purchase", "lbo_financing"],
+      "keywords": [
+        "유통",
+        "리테일",
+        "부동산"
+      ],
+      "structures": [
+        "share_purchase",
+        "lbo_financing"
+      ],
       "size": "약 7.2조원",
       "summary": "테스코로부터 홈플러스를 인수하며 대규모 인수금융을 활용한 국내 최대 규모 LBO.",
       "lesson": "과도한 레버리지와 점포 자산 매각에 의존한 상환 구조가 업황 악화 시 재무위기로 이어질 수 있음(2025년 회생절차 신청). LBO 시 DSCR·다운사이드 시나리오 검증 필수."
@@ -105,8 +175,14 @@
       "title": "한앤컴퍼니 – 남양유업 경영권 인수",
       "year": 2021,
       "industry": "식품",
-      "keywords": ["식품", "소비재", "상장사"],
-      "structures": ["share_purchase"],
+      "keywords": [
+        "식품",
+        "소비재",
+        "상장사"
+      ],
+      "structures": [
+        "share_purchase"
+      ],
       "size": "약 3,100억원 (지분 약 53%)",
       "summary": "오너 일가와 SPA를 체결했으나 매도인이 계약 해제를 주장해 소송으로 비화, 2024년 대법원에서 한앤컴퍼니 승소 후 경영권 이전.",
       "lesson": "SPA 선행조건·확약사항의 명확화와 매도인 이행 확보 장치(위약벌, 에스크로 등)의 중요성. 서명 후 종결까지의 '딜 리스크' 대표 사례."
@@ -116,8 +192,17 @@
       "title": "현대중공업지주 컨소시엄 – 두산인프라코어 인수",
       "year": 2021,
       "industry": "기계·건설장비",
-      "keywords": ["기계", "제조", "carve-out", "구조조정"],
-      "structures": ["split_off_sale", "share_purchase", "consortium"],
+      "keywords": [
+        "기계",
+        "제조",
+        "carve-out",
+        "구조조정"
+      ],
+      "structures": [
+        "split_off_sale",
+        "share_purchase",
+        "consortium"
+      ],
       "size": "약 8,500억원",
       "summary": "두산인프라코어를 투자부문(두산밥캣 지분 등)과 사업부문으로 분할하고, 투자부문은 두산중공업에 합병, 사업부문 지분을 현대중공업지주·KDB인베스트먼트 컨소시엄에 매각.",
       "lesson": "매각 대상이 아닌 자산을 분할로 떼어낸 뒤 사업회사 주식을 매각하는 carve-out 구조. 그룹 구조조정(채권단 약정)과 연계."
@@ -127,8 +212,17 @@
       "title": "LG화학 – 배터리사업 물적분할(LG에너지솔루션)",
       "year": 2020,
       "industry": "배터리·화학",
-      "keywords": ["배터리", "화학", "제조", "상장사", "구조조정"],
-      "structures": ["split_off_sale", "new_share_issue"],
+      "keywords": [
+        "배터리",
+        "화학",
+        "제조",
+        "상장사",
+        "구조조정"
+      ],
+      "structures": [
+        "split_off_sale",
+        "new_share_issue"
+      ],
       "size": "2022년 IPO 공모 약 12.8조원",
       "summary": "전지사업을 물적분할해 100% 자회사로 신설한 뒤 IPO(신주 발행)로 대규모 자금을 조달.",
       "lesson": "물적분할 후 자회사 상장 시 모회사 소액주주 가치 희석 논란 → 이후 상장사 물적분할 반대주주 주식매수청구권 도입 등 제도 개선으로 이어짐."
@@ -138,8 +232,15 @@
       "title": "셀트리온 – 셀트리온헬스케어 합병",
       "year": 2023,
       "industry": "바이오",
-      "keywords": ["바이오", "제약", "상장사", "구조조정"],
-      "structures": ["merger"],
+      "keywords": [
+        "바이오",
+        "제약",
+        "상장사",
+        "구조조정"
+      ],
+      "structures": [
+        "merger"
+      ],
       "size": "시가총액 기준 수십조원 규모",
       "summary": "상장 계열사인 셀트리온이 셀트리온헬스케어를 흡수합병해 개발·판매 법인을 통합.",
       "lesson": "계열사 합병으로 내부거래·회계 투명성 논란을 해소. 주식매수청구권 행사 규모를 합병 해제 조건으로 설정한 점이 실무상 핵심."
@@ -149,8 +250,16 @@
       "title": "KG컨소시엄 – 쌍용자동차 인수",
       "year": 2022,
       "industry": "자동차",
-      "keywords": ["자동차", "제조", "회생", "구조조정"],
-      "structures": ["new_share_issue", "consortium"],
+      "keywords": [
+        "자동차",
+        "제조",
+        "회생",
+        "구조조정"
+      ],
+      "structures": [
+        "new_share_issue",
+        "consortium"
+      ],
       "size": "약 3,000억원대",
       "summary": "회생절차 중인 쌍용자동차를 제3자배정 유상증자(신주 인수) 방식으로 인수, 회생계획에 따라 기존 채무 변제.",
       "lesson": "회생기업 M&A는 신주 인수 + 회생계획 연계가 표준. 채권단 동의율 확보를 위해 인수대금 상향 협상이 발생."
@@ -160,8 +269,15 @@
       "title": "네이버 – 포쉬마크 인수",
       "year": 2023,
       "industry": "이커머스",
-      "keywords": ["이커머스", "플랫폼", "크로스보더", "상장사"],
-      "structures": ["merger"],
+      "keywords": [
+        "이커머스",
+        "플랫폼",
+        "크로스보더",
+        "상장사"
+      ],
+      "structures": [
+        "merger"
+      ],
       "size": "약 1.6조원 (12억 달러)",
       "summary": "미국 상장사 포쉬마크를 네이버 현지 자회사와의 역삼각합병 방식으로 100% 인수.",
       "lesson": "해외 상장사 100% 인수 시 현지 SPC를 활용한 역삼각합병이 일반적. 높은 인수 프리미엄에 따른 영업권·손상 리스크 관리 필요."
@@ -171,8 +287,17 @@
       "title": "한국앤컴퍼니그룹 – 한온시스템 인수",
       "year": 2024,
       "industry": "자동차부품",
-      "keywords": ["자동차", "부품", "제조", "상장사"],
-      "structures": ["mixed_old_new", "staged_closing", "new_share_issue"],
+      "keywords": [
+        "자동차",
+        "부품",
+        "제조",
+        "상장사"
+      ],
+      "structures": [
+        "mixed_old_new",
+        "staged_closing",
+        "new_share_issue"
+      ],
       "size": "약 2조원 내외",
       "summary": "한앤컴퍼니 보유 구주를 단계적으로 인수하고 제3자배정 유상증자에 참여해 과반 지분을 확보, 2025년 초 최대주주 변경 완료.",
       "lesson": "구주 + 신주 혼합 및 단계적 인수로 매도자(PE) 엑싯과 대상회사 재무구조 개선(부채 축소)을 동시에 달성."
@@ -182,8 +307,15 @@
       "title": "SK온 – 포드 합작법인 블루오벌SK 설립",
       "year": 2021,
       "industry": "배터리",
-      "keywords": ["배터리", "제조", "크로스보더", "합작"],
-      "structures": ["joint_venture"],
+      "keywords": [
+        "배터리",
+        "제조",
+        "크로스보더",
+        "합작"
+      ],
+      "structures": [
+        "joint_venture"
+      ],
       "size": "총 투자 약 10조원대 (50:50)",
       "summary": "미국 내 배터리 생산을 위해 SK온과 포드가 50:50 합작법인을 설립.",
       "lesson": "고객사와 JV로 수요 확보·투자 분담. 이후 시장 환경 변화 시 JV 해소·자산 분배 조항의 중요성이 부각."
@@ -193,11 +325,137 @@
       "title": "SK텔레콤 – SK브로드밴드 포괄적 주식교환",
       "year": 2015,
       "industry": "통신",
-      "keywords": ["통신", "상장사", "구조조정"],
-      "structures": ["share_swap"],
+      "keywords": [
+        "통신",
+        "상장사",
+        "구조조정"
+      ],
+      "structures": [
+        "share_swap"
+      ],
       "size": "잔여 소수지분 전량 교환",
       "summary": "SK텔레콤이 상장 자회사 SK브로드밴드의 소수주주 지분을 포괄적 주식교환으로 취득해 100% 자회사로 편입(상장폐지).",
       "lesson": "현금 없이 자회사 완전자회사화. 교환비율 공정성과 반대주주 주식매수청구 규모가 관건."
+    },
+    {
+      "id": "yp-mbk-koreazinc-2024",
+      "title": "영풍·MBK파트너스 – 고려아연 공개매수",
+      "year": 2024,
+      "industry": "비철금속",
+      "keywords": [
+        "비철",
+        "금속",
+        "제조",
+        "상장사",
+        "지분 확대"
+      ],
+      "structures": [
+        "tender_offer",
+        "holdco_purchase",
+        "consortium",
+        "lbo_financing"
+      ],
+      "size": "조 단위 (경쟁 공개매수로 가격 수차례 인상)",
+      "summary": "최대주주 측 영풍이 MBK파트너스와 손잡고 고려아연 지분 확대를 위한 공개매수를 실시. MBK는 '최대주주 경영권 강화'라고 밝혔고 회사 측은 적대적 M&A라고 반발.",
+      "lesson": "최대주주 지분 확대에 PE 자금·인수금융을 결합한 대표 사례. 상대 측 대항 공개매수가 붙으면 가격이 급등하고 경영권 분쟁·소송으로 번질 수 있다."
+    },
+    {
+      "id": "koreazinc-self-tender-2024",
+      "title": "고려아연 – 자기주식 공개매수",
+      "year": 2024,
+      "industry": "비철금속",
+      "keywords": [
+        "비철",
+        "금속",
+        "제조",
+        "상장사",
+        "자사주"
+      ],
+      "structures": [
+        "treasury_buyback",
+        "tender_offer"
+      ],
+      "size": "조 단위 (회사 차입 포함)",
+      "summary": "영풍·MBK 공개매수에 맞서 회사가 차입을 포함한 대규모 자금으로 자기주식 공개매수를 실시.",
+      "lesson": "회사 자금, 특히 차입을 지배권 방어·강화에 쓰면 이사 책임·감독당국 조사·재무건전성 논란이 커진다. 자사주 매입은 잉여현금과 주주환원 명분 안에서 설계해야 한다."
+    },
+    {
+      "id": "shinsung-tender-2025",
+      "title": "신성통상 – 오너 일가 공개매수·자진상폐 시도",
+      "year": 2025,
+      "industry": "의류·패션",
+      "keywords": [
+        "의류",
+        "패션",
+        "소비재",
+        "상장사",
+        "지분 확대"
+      ],
+      "structures": [
+        "tender_offer",
+        "holdco_purchase",
+        "take_private"
+      ],
+      "size": "2025년 공개매수가 주당 4,100원 (지분 약 16%)",
+      "summary": "2024년 주당 2,300원 공개매수는 추가 확보 지분이 5.89%에 그쳐 상장폐지 요건(95%)에 미달. 2025년 최대주주 법인들이 가격을 4,100원으로 올려 재추진.",
+      "lesson": "가격이 낮으면 공개매수는 실패하고 소액주주 반발만 커진다. 오너 측 공개매수는 가격 공정성 논리가 핵심."
+    },
+    {
+      "id": "hahn-ssangyongcne-2024",
+      "title": "한앤컴퍼니 – 쌍용C&E 공개매수·상장폐지",
+      "year": 2024,
+      "industry": "시멘트",
+      "keywords": [
+        "시멘트",
+        "건자재",
+        "제조",
+        "상장사"
+      ],
+      "structures": [
+        "take_private",
+        "tender_offer",
+        "share_swap"
+      ],
+      "size": "잔여 소액주주 지분 전량",
+      "summary": "최대주주인 한앤컴퍼니가 공개매수 후 포괄적 주식교환을 병행해 지분 100%를 확보하고 상장폐지.",
+      "lesson": "공개매수 + 포괄적 주식교환은 자진 상장폐지의 실행 템플릿. 잔여 지분 전체를 사야 해 자금 부담이 크다."
+    },
+    {
+      "id": "hyosung-holdco-2018",
+      "title": "효성 – 인적분할 지주회사 전환·현물출자 공개매수",
+      "year": 2018,
+      "industry": "화학·섬유",
+      "keywords": [
+        "화학",
+        "섬유",
+        "제조",
+        "상장사",
+        "지배구조"
+      ],
+      "structures": [
+        "holdco_conversion",
+        "split_off_sale"
+      ],
+      "size": "사업회사 주식 현물출자",
+      "summary": "효성을 지주회사와 4개 사업회사로 인적분할한 뒤, 지주회사가 사업회사 주식을 현물출자받는 공개매수를 실시해 오너 일가의 지주회사 지분율을 높임.",
+      "lesson": "현금 없이 지배력을 강화한 전형적 방식. 이후 인적분할 시 자사주 신주배정 금지 등 제도 개선으로 같은 효과를 내기 어려워졌다."
+    },
+    {
+      "id": "ecopro-prs-2025",
+      "title": "에코프로 – 에코프로비엠 주식 기초 PRS",
+      "year": 2025,
+      "industry": "배터리 소재",
+      "keywords": [
+        "배터리",
+        "소재",
+        "상장사"
+      ],
+      "structures": [
+        "equity_derivatives"
+      ],
+      "size": "약 8,000억원 (2년, 연 5%대 수수료로 알려짐)",
+      "summary": "지주회사 에코프로가 자회사 에코프로비엠 주식을 기초자산으로 증권사와 주가수익스와프(PRS) 계약을 맺어 자금을 조달.",
+      "lesson": "PRS는 지분을 담보로 한 자금조달 수단이며 기초주식 의결권·배당이 증권사로 넘어갈 수 있다. 지배력 강화 수단으로는 한계가 있다."
     }
   ]
 }

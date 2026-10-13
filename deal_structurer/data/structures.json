@@ -37,7 +37,15 @@
         {"if": {"buyer_cash": ["low"]}, "score": -1, "why": "전액 현금 대가가 원칙이라 매수자 자금부담이 큼"},
         {"if": {"target_needs_capital": [true]}, "score": -1, "why": "대상회사 성장자금은 별도로 조달해야 함"},
         {"if": {"carve_out": [true]}, "score": -3, "why": "일부 사업만 거래하는 경우 분할 등 선행 절차 없이는 적용 불가"},
-        {"if": {"urgency": ["high"]}, "score": 1, "why": "절차가 단순해 신속한 종결에 유리"}
+        {"if": {"urgency": ["high"]}, "score": 1, "why": "절차가 단순해 신속한 종결에 유리"},
+        {"if": {"objective": ["control_increase"]}, "score": -1, "why": "분산된 지분은 단일 SPA로 확보하기 어려움 (블록딜은 HoldCo 매입 구조로 검토)"}
+      ],
+      "combos": [
+        {
+          "with": "lbo_financing",
+          "name": "구주 인수 + 인수금융",
+          "note": "SPC를 세워 대상회사 주식 담보로 인수금융을 조달하는 표준 바이아웃 구조."
+        }
       ]
     },
     {
@@ -65,8 +73,10 @@
         {"if": {"seller_stays": [true]}, "score": 1, "why": "기존 대주주가 지분을 유지하며 경영 참여 가능"},
         {"if": {"objective": ["divestiture"]}, "score": -3, "why": "기존 주주의 엑싯 수단이 되지 못함"},
         {"if": {"liability_risk": ["high"]}, "score": -1, "why": "기존 부채·우발채무는 그대로 남음"},
-        {"if": {"stake": ["full"]}, "score": -2, "why": "희석 구조로 100% 지분 확보는 사실상 불가"}
-      ]
+        {"if": {"stake": ["full"]}, "score": -2, "why": "희석 구조로 100% 지분 확보는 사실상 불가"},
+        {"if": {"objective": ["control_increase"]}, "score": -2, "why": "최대주주 대상 제3자배정은 저가발행·기존 주주 신주인수권 침해 논란"}
+      ],
+      "combos": []
     },
     {
       "id": "mixed_old_new",
@@ -91,8 +101,10 @@
         {"if": {"valuation_gap": ["high"]}, "score": 1, "why": "구주·신주 비율로 가격 갭을 일부 흡수 가능"},
         {"if": {"objective": ["capital_raise"]}, "score": 1, "why": "신주 부분으로 회사 자금조달 가능"},
         {"if": {"objective": ["divestiture"], "seller_stays": [false]}, "score": -1, "why": "매도자 완전 엑싯이 목표라면 구조가 과도하게 복잡"},
-        {"if": {"stake": ["full"]}, "score": -1, "why": "100% 인수라면 신주 혼합의 실익이 작음"}
-      ]
+        {"if": {"stake": ["full"]}, "score": -1, "why": "100% 인수라면 신주 혼합의 실익이 작음"},
+        {"if": {"objective": ["control_increase"]}, "exclude": true, "why": "기존 지배주주의 지분 확대에는 해당하지 않음"}
+      ],
+      "combos": []
     },
     {
       "id": "asset_purchase",
@@ -118,8 +130,10 @@
         {"if": {"permits_critical": [true]}, "score": -2, "why": "인허가 재취득·승계 신고가 필요해 영업 공백 리스크"},
         {"if": {"seller_tax_sensitive": ["high"]}, "score": -1, "why": "법인세 + 배당 이중과세로 매도자 세부담 큼"},
         {"if": {"urgency": ["high"]}, "score": -1, "why": "개별 이전 절차로 시간이 오래 걸림"},
-        {"if": {"objective": ["capital_raise", "minority"]}, "exclude": true, "why": "지분 투자 목적과 맞지 않음"}
-      ]
+        {"if": {"objective": ["capital_raise", "minority"]}, "exclude": true, "why": "지분 투자 목적과 맞지 않음"},
+        {"if": {"objective": ["control_increase"]}, "exclude": true, "why": "자산 거래는 지분 확대 목적과 맞지 않음"}
+      ],
+      "combos": []
     },
     {
       "id": "business_transfer",
@@ -145,8 +159,10 @@
         {"if": {"permits_critical": [true]}, "score": -1, "why": "인허가 승계 요건 충족 여부를 확인해야 함"},
         {"if": {"urgency": ["high"]}, "score": -1, "why": "고용·계약 승계 절차로 시간이 소요됨"},
         {"if": {"objective": ["capital_raise", "minority"]}, "exclude": true, "why": "지분 투자 목적과 맞지 않음"},
-        {"if": {"carve_out": [false]}, "score": -2, "why": "회사 전체 거래라면 주식 거래 대비 이전 절차 부담만 큼"}
-      ]
+        {"if": {"carve_out": [false]}, "score": -2, "why": "회사 전체 거래라면 주식 거래 대비 이전 절차 부담만 큼"},
+        {"if": {"objective": ["control_increase"]}, "exclude": true, "why": "영업 거래는 지분 확대 목적과 맞지 않음"}
+      ],
+      "combos": []
     },
     {
       "id": "merger",
@@ -175,8 +191,10 @@
         {"if": {"urgency": ["high"]}, "score": -2, "why": "주총·채권자보호절차로 일정이 김"},
         {"if": {"liability_risk": ["high"]}, "score": -1, "why": "우발채무가 포괄 승계됨"},
         {"if": {"objective": ["minority", "capital_raise"]}, "exclude": true, "why": "법인 통합 구조라 소수지분/투자유치와 맞지 않음"},
-        {"if": {"carve_out": [true]}, "score": -1, "why": "일부 사업만 거래 시 분할합병 등 추가 절차 필요"}
-      ]
+        {"if": {"carve_out": [true]}, "score": -1, "why": "일부 사업만 거래 시 분할합병 등 추가 절차 필요"},
+        {"if": {"objective": ["control_increase"]}, "exclude": true, "why": "지배주주가 개인이면 합병할 매수회사가 없어 지분 확대 수단이 아님"}
+      ],
+      "combos": []
     },
     {
       "id": "split_off_sale",
@@ -202,8 +220,10 @@
         {"if": {"objective": ["divestiture"]}, "score": 1, "why": "비핵심 사업 매각에 활용"},
         {"if": {"permits_critical": [true]}, "score": 1, "why": "분할 시 인허가 승계 규정을 활용해 신설법인으로 이전 가능"},
         {"if": {"liability_risk": ["high"]}, "score": 1, "why": "분할계획서로 부채 배분 가능(연대책임 배제 절차 필요)"},
-        {"if": {"urgency": ["high"]}, "score": -2, "why": "분할 절차로 일정이 김"}
-      ]
+        {"if": {"urgency": ["high"]}, "score": -2, "why": "분할 절차로 일정이 김"},
+        {"if": {"objective": ["control_increase"]}, "exclude": true, "why": "사업 매각 구조로 지분 확대 목적과 맞지 않음 (지주회사 전환은 별도 대안)"}
+      ],
+      "combos": []
     },
     {
       "id": "share_swap",
@@ -229,8 +249,10 @@
         {"if": {"valuation_gap": ["high"]}, "score": 1, "why": "주식 대가로 향후 가치 상승을 공유해 가격 갭 완화"},
         {"if": {"buyer_type": ["financial"]}, "exclude": true, "why": "재무적 투자자(펀드)는 자기 주식을 대가로 지급할 수 없음"},
         {"if": {"objective": ["divestiture"], "seller_stays": [false]}, "score": -1, "why": "현금 엑싯을 원하는 매도자에게는 부적합"},
-        {"if": {"objective": ["minority", "capital_raise"]}, "exclude": true, "why": "경영권 인수 대가 구조라 투자유치와 맞지 않음"}
-      ]
+        {"if": {"objective": ["minority", "capital_raise"]}, "exclude": true, "why": "경영권 인수 대가 구조라 투자유치와 맞지 않음"},
+        {"if": {"objective": ["control_increase"]}, "exclude": true, "why": "매수회사 주식을 대가로 주는 구조라 개인 지배주주의 지분 확대와 맞지 않음"}
+      ],
+      "combos": []
     },
     {
       "id": "tender_offer",
@@ -255,8 +277,10 @@
         {"if": {"urgency": ["high"]}, "score": 1, "why": "단기간에 지분 확보 가능"},
         {"if": {"objective": ["control"]}, "score": 1, "why": "경영권 확보·경쟁 대응 수단"},
         {"if": {"buyer_cash": ["low"]}, "score": -2, "why": "프리미엄 포함 현금 부담이 큼"},
-        {"if": {"objective": ["capital_raise", "divestiture"]}, "exclude": true, "why": "매수자 주도 지분 취득 수단이라 목적과 맞지 않음"}
-      ]
+        {"if": {"objective": ["capital_raise", "divestiture"]}, "exclude": true, "why": "매수자 주도 지분 취득 수단이라 목적과 맞지 않음"},
+        {"if": {"objective": ["control_increase"]}, "score": 2, "why": "분산 지분을 전체 주주 동일 조건으로 단기 확보"}
+      ],
+      "combos": []
     },
     {
       "id": "joint_venture",
@@ -282,8 +306,129 @@
         {"if": {"seller_stays": [true]}, "score": 2, "why": "기존 사업자가 파트너로 계속 참여하는 구조"},
         {"if": {"carve_out": [true]}, "score": 1, "why": "사업부를 현물출자해 JV로 분리 가능"},
         {"if": {"objective": ["divestiture"], "seller_stays": [false]}, "score": -2, "why": "완전 엑싯을 원하는 매도자에게 부적합"},
-        {"if": {"objective": ["capital_raise"]}, "score": -1, "why": "회사 자체 투자유치라면 신주 발행이 더 직접적"}
+        {"if": {"objective": ["capital_raise"]}, "score": -1, "why": "회사 자체 투자유치라면 신주 발행이 더 직접적"},
+        {"if": {"objective": ["control_increase"]}, "exclude": true, "why": "공동보유 구조라 지배력 강화 목적과 맞지 않음"}
+      ],
+      "combos": []
+    },
+    {
+      "id": "treasury_buyback",
+      "kind": "core",
+      "name": "자기주식 취득·소각 (회사 자금)",
+      "summary": "대상회사가 장내 매입 또는 자기주식 공개매수로 자사주를 취득해 소각한다. 발행주식수가 줄어 최대주주 지분율이 최대주주 현금 투입 없이 상승한다.",
+      "attrs": {
+        "control": "중간 (지분율 간접 상승)",
+        "buyer_cash": "없음 (회사 자금)",
+        "liability_shield": "해당 없음",
+        "permits": "유리 (법인 유지)",
+        "seller_tax": "중간 (응모 주주 과세 방식 검토)",
+        "complexity": "낮음~중간",
+        "timeline": "1~3개월"
+      },
+      "pros": ["최대주주 현금·차입 없이 지분율을 높인다", "저평가 구간 매입은 잔존 주주 전체의 주당가치를 높여 주주환원 명분이 있다", "취득 자사주는 상법상 원칙적으로 1년 내 소각해야 하므로(2026 개정) 소각 경로가 명확하다"],
+      "cons": ["배당가능이익 한도 내에서만 가능하다(상법 제341조)", "최대주주 지분율 상승이 주목적으로 비치면 이사 충실의무(2025 개정 상법) 위반 논란과 소송 리스크가 있다", "차입으로 자사주를 매입하면 재무건전성 훼손과 감독당국 조사 논란이 크다", "회사 현금이 줄어 투자 여력이 감소한다"],
+      "checkpoints": ["배당가능이익·가용현금 산정", "이사회 결의 시 주주환원·자본효율 목적과 가격 적정성 근거 문서화", "자기주식 공개매수 시 응모 주주 과세(양도 vs 의제배당) 검토", "최대주주 측 동시 매매 금지 등 내부자거래 규제 준수"],
+      "rules": [
+        {"if": {"objective": ["control_increase"]}, "score": 3, "why": "최대주주 현금 없이 지분율을 높이는 가장 직접적인 수단"},
+        {"if": {"target_cash_rich": [true]}, "score": 2, "why": "회사 잉여현금으로 매입 재원 확보 가능"},
+        {"if": {"target_cash_rich": [false]}, "score": -3, "why": "회사 현금이 부족하면 차입 자사주 매입이 되어 충실의무·재무건전성 논란"},
+        {"if": {"buyer_cash": ["low"]}, "score": 2, "why": "최대주주 자금 부족을 회사 단계에서 보완"},
+        {"if": {"objective": ["restructuring"]}, "score": 1, "why": "자본구조 재편 수단으로 활용 가능"},
+        {"if": {"objective": ["control", "minority", "capital_raise", "divestiture"]}, "exclude": true, "why": "회사 자사주 매입은 기존 지배주주 지분 확대·자본 재편 목적에만 해당"}
+      ],
+      "combos": [
+        {
+          "with": "holdco_purchase",
+          "name": "자사주 소각 → 최대주주 HoldCo 잔여분 매입 (2단계)",
+          "note": "회사 소각으로 지분율을 먼저 끌어올린 뒤 남은 차이만 HoldCo가 매입해 최대주주 차입 규모와 반대매매 리스크를 줄인다. 두 단계의 매매 시점은 내부자거래 규제상 분리해야 한다."
+        },
+        {
+          "with": "tender_offer",
+          "name": "자기주식 공개매수",
+          "note": "회사가 공개매수 방식으로 자사주를 취득하면 단기간에 물량을 확보하고 전체 주주에게 같은 조건을 제시할 수 있다."
+        }
       ]
+    },
+    {
+      "id": "holdco_purchase",
+      "kind": "core",
+      "name": "최대주주 HoldCo(SPC) 구조화 매입 (블록딜·부분 공개매수)",
+      "summary": "최대주주가 지주 SPC를 세우고 PE 우선주·크레딧펀드 대출 등 구조화 금융으로 자금을 조달해 블록딜, 부분 공개매수, 장내 매수로 추가 지분을 취득한다.",
+      "attrs": {
+        "control": "높음",
+        "buyer_cash": "중간 (외부 자금 레버리지)",
+        "liability_shield": "해당 없음 (SPC 단위 분리)",
+        "permits": "유리 (법인 유지)",
+        "seller_tax": "중간 (매도 주주 양도세)",
+        "complexity": "중간~높음",
+        "timeline": "2~4개월"
+      },
+      "pros": ["실물 주식과 의결권을 직접 확보한다", "PE 우선주·홀드코 론 등으로 최대주주 자기자본 부족을 보완한다", "블록딜로 소수 기관과 협상하면 프리미엄을 최소화할 수 있다"],
+      "cons": ["주가 하락 시 담보비율 미달·반대매매로 경영권을 잃을 수 있다", "신규 매입 지분 배당만으로는 이자 상환이 부족한 경우가 많다", "PE 풋옵션 등 엑싯 조건이 최대주주의 미래 현금 부담이 된다", "내부자거래 사전공시·미공개정보 이용 금지 규제를 받는다"],
+      "checkpoints": ["배당 커버리지(HoldCo 수령 배당 ÷ 이자) 시뮬레이션", "기존 보유 주식 현물출자 시 양도세 과세이연 요건 검토", "장외 매입 상대방 수 관리(6개월·10인·5% 의무공개매수 기준)", "PE·대주단과의 약정이 공동보유 보고 대상인지 검토", "HoldCo 수입배당금 익금불산입률(보유지분율 기준) 확인"],
+      "rules": [
+        {"if": {"objective": ["control_increase"]}, "score": 3, "why": "기존 최대주주가 실물 지분과 의결권을 직접 늘리는 구조"},
+        {"if": {"buyer_cash": ["low"]}, "score": 1, "why": "구조화 금융으로 자금 부족 보완 가능"},
+        {"if": {"target_listed": [true]}, "score": 1, "why": "상장 주식 담보로 인수금융·크레딧 조달이 용이"},
+        {"if": {"urgency": ["high"]}, "score": 1, "why": "블록딜·공개매수로 단기 실행 가능"},
+        {"if": {"objective": ["control", "minority", "capital_raise", "divestiture", "restructuring"]}, "exclude": true, "why": "기존 지배주주의 지분 확대 전용 구조 (제3자 인수는 구주 인수 + 인수금융으로 검토)"}
+      ],
+      "combos": []
+    },
+    {
+      "id": "holdco_conversion",
+      "kind": "core",
+      "name": "인적분할 지주회사 전환 + 현물출자 공개매수",
+      "summary": "대상회사를 지주회사와 사업회사로 인적분할한 뒤, 지주회사가 사업회사 주주로부터 사업회사 주식을 현물출자받고 지주회사 신주를 발행해 최대주주의 지주회사 지분율을 높인다.",
+      "attrs": {
+        "control": "높음 (지주회사 기준)",
+        "buyer_cash": "매우 낮음",
+        "liability_shield": "해당 없음",
+        "permits": "중간 (분할 시 승계 검토)",
+        "seller_tax": "낮음 (과세이연 특례 요건 충족 시)",
+        "complexity": "높음",
+        "timeline": "6~12개월"
+      },
+      "pros": ["현금 없이 지배력을 강화하는 전통적 방식", "지배구조 단순화와 사업회사별 가치 평가 기회"],
+      "cons": ["상장사 인적분할 시 자기주식에 신주를 배정할 수 없어(2024 제도 개선) 지분율 상승 효과가 줄었다", "지주회사 할인·이중상장 논란으로 소액주주 반발이 크다", "분할·재상장·공개매수 절차로 일정이 길다", "단일 사업 중소형사는 분할의 사업상 명분이 약하다"],
+      "checkpoints": ["공정거래법상 지주회사 요건(자산총액 등) 해당 여부", "현물출자 과세이연 특례 요건과 일몰 여부", "분할 비율·재상장 요건", "소액주주 보호 논리와 주주총회 표 대결 가능성"],
+      "rules": [
+        {"if": {"objective": ["control_increase"]}, "score": 2, "why": "현금 없이 최대주주 지배력을 높이는 수단"},
+        {"if": {"objective": ["restructuring"]}, "score": 2, "why": "지배구조 개편 수단"},
+        {"if": {"buyer_cash": ["low"]}, "score": 2, "why": "최대주주 현금이 거의 필요 없음"},
+        {"if": {"urgency": ["high"]}, "score": -2, "why": "분할·재상장·공개매수로 일정이 김"},
+        {"if": {"target_listed": [false]}, "exclude": true, "why": "현물출자 공개매수는 상장사 전제"},
+        {"if": {"objective": ["control", "minority", "capital_raise", "divestiture"]}, "exclude": true, "why": "기존 지배주주의 지배구조 개편 수단"}
+      ],
+      "combos": []
+    },
+    {
+      "id": "take_private",
+      "kind": "core",
+      "name": "공개매수 후 자진 상장폐지 (Take-Private)",
+      "summary": "최대주주 또는 PE가 공개매수와 포괄적 주식교환 등을 병행해 지분을 상장폐지 요건 수준까지 확보한 뒤 자진 상장폐지한다.",
+      "attrs": {
+        "control": "완전",
+        "buyer_cash": "매우 높음",
+        "liability_shield": "해당 없음",
+        "permits": "유리 (법인 유지)",
+        "seller_tax": "중간",
+        "complexity": "높음",
+        "timeline": "6~12개월"
+      },
+      "pros": ["소액주주 이해관계와 상장 유지 비용에서 벗어나 경영 자율성을 확보한다", "장기 승계·구조개편을 비상장 상태에서 진행할 수 있다"],
+      "cons": ["잔여 소액주주 지분 전체를 프리미엄 붙여 사야 해 비용이 매우 크다", "가격이 낮으면 응모 부족으로 상장폐지 요건 달성에 실패한다", "PE 자금 의존도가 커져 최대주주 지배력이 오히려 희석될 수 있다", "소수주주 보호 강화·의무공개매수 재도입 흐름으로 난이도가 높아지고 있다"],
+      "checkpoints": ["거래소 자진 상장폐지 요건(통상 95% 수준)", "공개매수가 산정과 소액주주 반발 대응", "잔여주식 강제매수(지배주주 매도청구) 요건", "PE 엑싯 시나리오"],
+      "rules": [
+        {"if": {"stake": ["full"]}, "score": 3, "why": "100% 지배·상장폐지가 목표일 때 적합"},
+        {"if": {"stake": ["majority", "minority"]}, "score": -3, "why": "과반 확보가 목적이라면 비용이 과도함"},
+        {"if": {"objective": ["control_increase", "control"]}, "score": 1, "why": "지배력 극대화 수단"},
+        {"if": {"buyer_cash": ["low"]}, "score": -2, "why": "잔여 지분 전체 매입 자금 부담이 큼"},
+        {"if": {"urgency": ["high"]}, "score": -1, "why": "상장폐지 요건 충족까지 시간이 걸림"},
+        {"if": {"target_listed": [false]}, "exclude": true, "why": "상장사에만 해당"},
+        {"if": {"objective": ["minority", "capital_raise", "divestiture"]}, "exclude": true, "why": "지배력 확대 목적에만 해당"}
+      ],
+      "combos": []
     },
     {
       "id": "earn_out",
@@ -298,7 +443,8 @@
         {"if": {"valuation_gap": ["mid"]}, "score": 1, "why": "가격 갭 일부 조정 수단"},
         {"if": {"seller_stays": [true]}, "score": 2, "why": "매도자가 경영에 남아 실적 달성 동기 부여 가능"},
         {"if": {"target_listed": [true]}, "score": -1, "why": "상장사는 시가가 있어 언아웃 적용이 제한적"},
-        {"if": {"objective": ["capital_raise", "minority"]}, "exclude": true, "why": "투자유치·소수지분 투자에는 리픽싱 등 종류주식 조건이 일반적"}
+        {"if": {"objective": ["capital_raise", "minority"]}, "exclude": true, "why": "투자유치·소수지분 투자에는 리픽싱 등 종류주식 조건이 일반적"},
+        {"if": {"objective": ["control_increase"]}, "exclude": true, "why": "시장 지분 매입에는 조건부 대가를 적용할 수 없음"}
       ]
     },
     {
@@ -357,7 +503,8 @@
         {"if": {"stake": ["full", "majority"]}, "score": 1, "why": "지배지분 인수 시 주식담보 금융 조달 용이"},
         {"if": {"stake": ["minority"]}, "score": -2, "why": "소수지분은 담보가치·현금흐름 통제가 약해 금융 조달 어려움"},
         {"if": {"buyer_type": ["strategic"], "buyer_cash": ["high"]}, "score": -2, "why": "자금 여력이 충분한 전략적 투자자는 차입 필요성이 낮음"},
-        {"if": {"objective": ["capital_raise"]}, "exclude": true, "why": "인수 자금조달 수단이라 투자유치와 무관"}
+        {"if": {"objective": ["capital_raise"]}, "exclude": true, "why": "인수 자금조달 수단이라 투자유치와 무관"},
+        {"if": {"objective": ["control_increase"]}, "score": 1, "why": "최대주주 HoldCo의 주식담보 인수금융·홀드코 론으로 활용"}
       ]
     },
     {
@@ -371,7 +518,8 @@
       "rules": [
         {"if": {"buyer_cash": ["low"]}, "score": 2, "why": "단독 자금으로 부족한 인수대금 분담"},
         {"if": {"buyer_type": ["strategic"], "buyer_cash": ["low", "mid"]}, "score": 1, "why": "SI + FI 결합으로 자금 보완"},
-        {"if": {"deal_size_eok": [">=5000"]}, "score": 1, "why": "대형 거래(5천억원 이상)에서 일반적"}
+        {"if": {"deal_size_eok": [">=5000"]}, "score": 1, "why": "대형 거래(5천억원 이상)에서 일반적"},
+        {"if": {"objective": ["control_increase"]}, "score": 1, "why": "PE·크레딧펀드가 HoldCo에 공동투자해 자금 분담"}
       ]
     },
     {
@@ -386,7 +534,21 @@
         {"if": {"objective": ["capital_raise"]}, "score": 2, "why": "투자유치 시 투자자 보호장치로 일반적"},
         {"if": {"objective": ["minority"]}, "score": 2, "why": "소수지분 투자자의 하방 보호 수단"},
         {"if": {"valuation_gap": ["high"]}, "score": 1, "why": "리픽싱·전환조건으로 가격 갭 조정"},
-        {"if": {"objective": ["restructuring"], "target_needs_capital": [true]}, "score": 1, "why": "재무구조 개선 시 영구채·CB 활용 사례 다수"}
+        {"if": {"objective": ["restructuring"], "target_needs_capital": [true]}, "score": 1, "why": "재무구조 개선 시 영구채·CB 활용 사례 다수"},
+        {"if": {"objective": ["control_increase"]}, "score": 2, "why": "PE 우선주·RCPS로 HoldCo 메자닌 자본 구성"}
+      ]
+    },
+    {
+      "id": "equity_derivatives",
+      "kind": "overlay",
+      "name": "주식 파생 구조 (PRS·TRS·교환사채)",
+      "summary": "증권사가 주식을 보유하고 상대방은 주가 변동만 정산하거나(PRS·TRS), 보유 주식을 교환대상으로 사채를 발행(EB)해 자금을 조달한다.",
+      "pros": ["당장 현금 부담 없이 주가 익스포저를 확보하거나 보유 지분으로 자금을 조달한다", "브릿지 성격의 단기 수단으로 활용 가능"],
+      "cons": ["기초주식 의결권이 통상 증권사에 있어 실질 지배력이 늘지 않는다", "우회 지분 취득·의결권 확보로 해석되면 공시 위반 소지", "PRS 회계 처리(매각 vs 부채)와 감독 기조가 정리되지 않았다"],
+      "checkpoints": ["의결권·배당 귀속 조항", "대량보유 보고·공동보유 해당 여부", "만기 정산 손실 시나리오"],
+      "rules": [
+        {"if": {"buyer_cash": ["low"], "target_listed": [true]}, "score": 1, "why": "상장 주식 기반 단기 자금조달 수단"},
+        {"if": {"objective": ["control_increase", "control"]}, "score": -2, "why": "의결권이 이전되지 않아 경영권 강화 효과가 제한적"}
       ]
     }
   ]

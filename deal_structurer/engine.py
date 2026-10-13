@@ -14,6 +14,7 @@ FIELDS = {
         "capital_raise": "투자유치 (회사 자금조달)",
         "divestiture": "지분·사업 매각 (엑싯)",
         "restructuring": "구조조정·지배구조 개편",
+        "control_increase": "최대주주 지분 확대 (경영권 강화)",
     }),
     "buyer_type": ("매수자(투자자) 유형", {
         "strategic": "전략적 투자자 (SI)",
@@ -33,6 +34,7 @@ FIELDS = {
     "valuation_gap": ("매도·매수 가격 갭", {"low": "작음", "mid": "보통", "high": "큼"}),
     "seller_stays": ("매도자 잔류·경영 참여 의향", {True: "있음", False: "없음 (완전 엑싯)"}),
     "target_needs_capital": ("대상회사 신규 자금 필요", {True: "필요", False: "불필요"}),
+    "target_cash_rich": ("대상회사 잉여현금", {True: "풍부 (자사주 매입 여력)", False: "보통·부족"}),
     "urgency": ("일정 긴급도", {"low": "여유", "mid": "보통", "high": "긴급"}),
     "industry": ("업종", None),
     "deal_size_eok": ("예상 거래규모 (억원)", None),
@@ -51,6 +53,7 @@ DEFAULTS = {
     "valuation_gap": "mid",
     "seller_stays": False,
     "target_needs_capital": False,
+    "target_cash_rich": False,
     "urgency": "mid",
     "industry": "",
     "deal_size_eok": None,
@@ -145,6 +148,7 @@ class Recommendation:
     excluded: list
     industry_cases: list
     disclaimer: str
+    combos: list = field(default_factory=list)
 
 
 def recommend(raw_profile, top=3, overlay_top=4):
@@ -167,4 +171,12 @@ def recommend(raw_profile, top=3, overlay_top=4):
     industry_cases = [c for c in cases if industry_match(c, profile["industry"])]
     industry_cases.sort(key=lambda c: c["year"], reverse=True)
 
-    return Recommendation(profile, core, overlays, excluded, industry_cases, case_db["disclaimer"])
+    # 추천된 구조끼리 함께 쓰면 효과가 큰 조합
+    chosen = {e.structure["id"]: e for e in core + overlays}
+    combos = [
+        {**combo, "ids": [ev.structure["id"], combo["with"]],
+         "names": [ev.structure["name"], chosen[combo["with"]].structure["name"]]}
+        for ev in core for combo in ev.structure.get("combos", []) if combo["with"] in chosen
+    ]
+
+    return Recommendation(profile, core, overlays, excluded, industry_cases, case_db["disclaimer"], combos)

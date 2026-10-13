@@ -36,9 +36,14 @@ def to_markdown(rec, title="거래 구조 대안 분석 리포트"):
     out += ["## 2. 추천 구조 대안 요약", "", "| 순위 | 구조 | 적합도 | 핵심 적합 사유 | 주요 우려 |", "|---|---|---|---|---|"]
     for i, ev in enumerate(rec.core, 1):
         pro = ev.reasons_for[0] if ev.reasons_for else "-"
-        con = ev.reasons_against[0] if ev.reasons_against else "-"
+        con = ev.reasons_against[0] if ev.reasons_against else f"(일반) {ev.structure['cons'][0]}"
         out.append(f"| {i} | {ev.structure['name']} | {ev.fit}/100 | {pro} | {con} |")
     out.append("")
+
+    if rec.combos:
+        out += ["**추천 결합 구조**", ""]
+        out += [f"- **{c['name']}** ({' + '.join(c['names'])}): {c['note']}" for c in rec.combos]
+        out.append("")
 
     out += ["## 3. 구조별 비교", ""]
     header = "| 비교 항목 | " + " | ".join(ev.structure["name"] for ev in rec.core) + " |"
@@ -123,6 +128,7 @@ def to_dict(rec):
         "core": [ev_dict(e) for e in rec.core],
         "overlays": [ev_dict(e) for e in rec.overlays],
         "excluded": [{"id": e.structure["id"], "reasons": e.reasons_against} for e in rec.excluded],
+        "combos": [{"name": c["name"], "ids": c["ids"], "note": c["note"]} for c in rec.combos],
         "industry_cases": [c["id"] for c in rec.industry_cases],
     }
 

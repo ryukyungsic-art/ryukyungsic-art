@@ -1,0 +1,12 @@
+{
+  "objective": "control_increase",
+  "buyer_type": "strategic",
+  "stake": "majority",
+  "target_listed": true,
+  "liability_risk": "low",
+  "buyer_cash": "low",
+  "seller_tax_sensitive": "low",
+  "target_cash_rich": true,
+  "industry": "기계·부품",
+  "deal_size_eok": 1000
+}

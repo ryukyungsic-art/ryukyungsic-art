@@ -25,6 +25,12 @@ class DataIntegrityTest(unittest.TestCase):
                         for v in values:
                             self.assertIn(v, choices, f"{s['id']}: {key}={v}")
 
+    def test_combos_reference_known_structures(self):
+        known = {s["id"] for s in load_json("structures.json")["structures"]}
+        for s in load_json("structures.json")["structures"]:
+            for combo in s.get("combos", []):
+                self.assertIn(combo["with"], known, s["id"])
+
     def test_cases_reference_known_structures(self):
         known = {s["id"] for s in load_json("structures.json")["structures"]}
         for c in load_json("cases.json")["cases"]:
@@ -70,6 +76,26 @@ class RecommendTest(unittest.TestCase):
         self.assertEqual(rec.core[0].structure["id"], "split_off_sale")
         self.assertNotIn("share_purchase", ids(rec.core))
         self.assertNotIn("lbo_financing", ids(rec.overlays))
+
+    def test_controlling_shareholder_increase(self):
+        rec = recommend(json.loads((EXAMPLES / "controlling_shareholder_increase.json").read_text()))
+        self.assertEqual(ids(rec.core)[:2], ["treasury_buyback", "holdco_purchase"])
+        for sid in ("merger", "share_swap", "asset_purchase", "joint_venture"):
+            self.assertIn(sid, ids(rec.excluded))
+        self.assertIn(["treasury_buyback", "holdco_purchase"], [c["ids"] for c in rec.combos])
+        self.assertNotIn("equity_derivatives", ids(rec.overlays))
+
+    def test_buyback_drops_without_surplus_cash(self):
+        profile = json.loads((EXAMPLES / "controlling_shareholder_increase.json").read_text())
+        profile["target_cash_rich"] = False
+        rec = recommend(profile)
+        self.assertEqual(rec.core[0].structure["id"], "holdco_purchase")
+        self.assertNotIn("treasury_buyback", ids(rec.core)[:2])
+
+    def test_new_structures_excluded_for_third_party_buyout(self):
+        rec = recommend(json.loads((EXAMPLES / "env_incinerator_buyout.json").read_text()))
+        for sid in ("treasury_buyback", "holdco_purchase", "holdco_conversion"):
+            self.assertIn(sid, ids(rec.excluded))
 
     def test_listed_target_allows_tender_offer(self):
         rec = recommend({"target_listed": True, "urgency": "high", "buyer_cash": "high"})

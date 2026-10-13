@@ -13,15 +13,21 @@ description: 딜 개요(대상회사·거래 목적·매수자/매도자 상황)
 
 | key | 허용값 |
 |---|---|
-| objective | control(경영권 인수) / minority(소수지분) / capital_raise(투자유치) / divestiture(매각·엑싯) / restructuring(구조조정) |
+| objective | control(제3자의 경영권 인수) / control_increase(기존 최대주주 지분 확대) / minority(소수지분) / capital_raise(투자유치) / divestiture(매각·엑싯) / restructuring(구조조정) |
 | buyer_type | strategic / financial |
 | stake | full / majority / minority |
-| target_listed, carve_out, permits_critical, seller_stays, target_needs_capital | true / false |
+| target_listed, carve_out, permits_critical, seller_stays, target_needs_capital, target_cash_rich | true / false |
 | liability_risk, buyer_cash, seller_tax_sensitive, valuation_gap, urgency | low / mid / high |
 | industry | 자유 텍스트 (예: "환경(소각)") |
 | deal_size_eok | 숫자 (억원) |
 
 환경업(소각·매립·재활용) 딜은 `permits_critical: true`를 기본으로 본다.
+
+기존 최대주주가 지분을 늘려 경영권을 강화하는 딜은 `control` 대신 `control_increase`를 쓴다. 이때 다음 항목은 리서치로 먼저 확인한다.
+- 현재 최대주주 지분율과 자기주식 잔량
+- 회사 잉여현금(`target_cash_rich`)과 배당가능이익
+- 목표 지분율까지 필요한 주식수와 금액(프리미엄별)
+- HoldCo 배당 커버리지
 
 ## 2단계: 엔진 실행
 

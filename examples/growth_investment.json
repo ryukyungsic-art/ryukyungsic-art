@@ -1,0 +1,11 @@
+{
+  "objective": "capital_raise",
+  "buyer_type": "financial",
+  "stake": "minority",
+  "target_listed": false,
+  "liability_risk": "low",
+  "valuation_gap": "high",
+  "seller_stays": true,
+  "target_needs_capital": true,
+  "industry": "바이오"
+}

@@ -1,0 +1,17 @@
+{
+  "objective": "control",
+  "buyer_type": "financial",
+  "stake": "full",
+  "target_listed": false,
+  "carve_out": false,
+  "liability_risk": "high",
+  "permits_critical": true,
+  "buyer_cash": "mid",
+  "seller_tax_sensitive": "high",
+  "valuation_gap": "high",
+  "seller_stays": true,
+  "target_needs_capital": false,
+  "urgency": "mid",
+  "industry": "환경(소각)",
+  "deal_size_eok": 3000
+}

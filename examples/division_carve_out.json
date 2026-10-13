@@ -1,0 +1,13 @@
+{
+  "objective": "divestiture",
+  "buyer_type": "strategic",
+  "stake": "full",
+  "target_listed": true,
+  "carve_out": true,
+  "liability_risk": "mid",
+  "permits_critical": true,
+  "buyer_cash": "high",
+  "seller_stays": false,
+  "urgency": "low",
+  "industry": "제조"
+}

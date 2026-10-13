@@ -19,6 +19,7 @@
 | 5 | `/my-clarify` | 모호한 M&A 요청을 구체적 실행 스펙으로 명확화 | ✅ 동작 |
 | 6 | `/my-context-sync` | Gmail·Calendar·Slack 정보를 하나의 문서로 정리 | ✅ 동작 |
 | 7 | `/my-session-wrap` | 세션 종료 시 작업 정리·문서 업데이트·학습 기록 | ✅ 동작 |
+| 8 | `/my-deal-structure` | 딜 개요 → 거래 구조 대안·장단점·유사 사례 연계 제안 리포트 | 🆕 신규 |
 
 ## 변화 기록
 

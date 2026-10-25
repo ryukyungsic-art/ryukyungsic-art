@@ -6,7 +6,7 @@ description: 국내 기업 M&A(경영권 인수·매각), 투자유치(지분투
 # 국내 M&A·투자유치 데일리 뉴스레터
 
 ## 설정
-- 수신자: kyung-sic.ryu@pwc.com
+- 수신자: ryukyungsic@gmail.com
 - 발송 계정: 연결된 Gmail 커넥터
 - 기준 시간대: 한국시간(KST)
 - 분량: 주요 딜 10건 내외 (중요도 순)
